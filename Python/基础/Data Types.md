@@ -87,7 +87,7 @@ print(txt)  # returns The price is 59.00 dollars
   print(bool(15))
   ```
 
-### 列表List
+### 列表List  框括号
 
 - 用法
 
@@ -167,7 +167,7 @@ print(txt)  # returns The price is 59.00 dollars
 
 ​	 
 
-### 元组Tuple
+### 元组Tuple  圆括号
 
 - 用法
 
@@ -202,7 +202,7 @@ print(txt)  # returns The price is 59.00 dollars
 
 
 
-### 集合set
+### 集合set  花括号
 
 - 用法
 
@@ -257,3 +257,46 @@ print(txt)  # returns The price is 59.00 dollars
   | `symmetric_difference_update()` |  `^=`  | 将本集合更新为与另一个集合的对称差集，即移除两个集合中共有的元素，并添加只存在于其中一个集合中的元素。 |
   |            `union()`            |   \|   |                返回一个包含集合的并集的集合。                |
   |           `update()`            |  \|=   |           使用此集合与其他集合的并集来更新此集合。           |
+
+### 字典 dict 花括号
+
+- 用法
+
+```python
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+# 获取值
+x = thisdict["model"]
+x = thisdict.values()
+# 获取键
+x = thisdict.keys()
+# 修改值 
+thisdict.update({"year": 2020})
+# 添加值
+thisdict.update({"color": "red"})
+# 删除值
+thisdict.pop("model")
+thisdict.popitem()
+thisdict.clear() #清空dict
+
+```
+
+- 方法
+
+  |     方法     |                          描述                          |
+  | :----------: | :----------------------------------------------------: |
+  |   clear()    |                  移除字典中的所有元素                  |
+  |    copy()    |                   返回字典的一个副本                   |
+  |  fromkeys()  |              返回一个具有指定键和值的字典              |
+  |    get()     |                     返回指定键的值                     |
+  |   items()    |       返回一个列表，其中每个键值对以元组形式存在       |
+  |    keys()    |              返回一个包含字典所有键的列表              |
+  |    pop()     |                  移除具有指定键的元素                  |
+  |  popitem()   |                  移除最后插入的键值对                  |
+  | setdefault() | 返回指定键的值。如果键不存在：插入该键，并赋予指定的值 |
+  |   update()   |                 用指定的键值对更新字典                 |
+  |   values()   |                 返回字典中所有值的列表                 |
+
