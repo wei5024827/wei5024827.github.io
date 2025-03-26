@@ -96,3 +96,56 @@
   ```
 
   
+
+### Class
+
+- \__init\__()函数
+
+  - 初始化函数，用来定义类是如何初始化的
+
+    ```python
+    class Person:
+      def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    
+    p1 = Person("John", 36)
+    
+    print(p1.name)
+    print(p1.age)
+    ```
+
+- \__str()\__ 函数
+
+  - 控制类返回的字符串形式
+
+  - 如果未设置该函数，则返回类的属性
+
+    ```python
+    class Person:
+      def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    
+    p1 = Person("John", 36)
+    
+    print(p1)   # returns 类的属性
+    ```
+
+  - 如果设置该函数，则返回该函数
+
+    ```python
+    class Person:
+      def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    
+      def __str__(self):
+        return f"{self.name}({self.age})"
+    
+    p1 = Person("John", 36)
+    
+    print(p1) # returns John(36)
+    ```
+
+    
