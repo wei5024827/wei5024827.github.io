@@ -95,7 +95,27 @@
   """""
   ```
 
+
+### 装饰器
+
+- 基础装饰器固定格式
+
+  ```
+  def decorator(func): #接受参数为函数
+  	def wrapper(*args, **kwargs): #定义包装函数
+      	x = func(*args, **kwargs)
+      	return x #必须返回原函数结果
+      return wrapper # 必须返回包装函数
   
+  @decorator
+  def target_function():
+  	pass
+      
+  ```
+
+  
+
+
 
 ### Class
 
