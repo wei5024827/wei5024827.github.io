@@ -100,7 +100,7 @@
 
 - 基础装饰器固定格式
 
-  ```
+  ```python
   def decorator(func): #接受参数为函数
   	def wrapper(*args, **kwargs): #定义包装函数
       	x = func(*args, **kwargs)
@@ -113,9 +113,30 @@
       
   ```
 
+
+- 类装饰器
+
+  ```python
+  class MyDecorator:
+      def __init__(self, func):
+          self.func = func
   
+      def __call__(self, *args, **kwargs):
+          print("类装饰器执行前")
+          self.func(*args, **kwargs)
+          print("类装饰器执行后")
+  
+  @MyDecorator
+  def say_hi():
+      print("Hi!")
+  
+  say_hi()  #returns 
+  #类装饰器执行前
+  #Hi!
+  #类装饰器执行后
+  ```
 
-
+  
 
 ### Class 类
 
