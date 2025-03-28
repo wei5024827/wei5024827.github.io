@@ -117,7 +117,7 @@
 
 
 
-### Class
+### Class 类
 
 - \__init\__()函数
 
@@ -165,7 +165,47 @@
     
     p1 = Person("John", 36)
     
-    print(p1) # returns John(36)
+    print(p1) # returs John(36)
     ```
 
+
+- self 参数
+
+  - self参数必须是class类中函数的第一个参数，可以不叫self
+
+    ```python
+    class Person:
+      def __init__(mysillyobject, name, age):
+        mysillyobject.name = name
+        mysillyobject.age = age
     
+      def myfunc(abc):  #这里的abc代表的是self
+        print("Hello my name is " + abc.name)
+    
+    p1 = Person("John", 36)
+    p1.myfunc()
+    ```
+
+
+### 类的继承(inheritance)
+
+- 子类可以用super()来继承父类的所有属性
+
+  ```python
+  class Person:
+    def __init__(self, fname, lname):
+      self.firstname = fname
+      self.lastname = lname
+  
+    def printname(self):
+      print(self.firstname, self.lastname)
+  
+  class Student(Person):
+    def __init__(self, fname, lname, year):
+      super().__init__(fname, lname)
+      self.graduationyear = year
+  
+  x = Student("Mike", "Olsen", 2019)
+  ```
+
+  
